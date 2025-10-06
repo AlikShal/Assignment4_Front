@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Task 2 – Bootstrap 12-col Grid (3 cols & 4 cols)</title>
+  <link href="styles.css" rel="stylesheet"><!-- your shared styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- simple site nav to switch tasks -->
+  <nav class="site-nav"><div class="bar">
+    <a class="brand" href="task0-typography.html">Assignment 4</a>
+    <ul>
+        <li><a href="typography.html">Task 0</a></li>
+        <li><a href="responsive-boxes.html">Task 1</a></li>
+        <li><a href="bootstrap-grid.html">Task 2</a></li>
+        <li><a href="bootstrap-navbar.html">Task 3</a></li>
+        <li><a class="active" href="portfolio-responsive.html">Task 4</a></li>
+    </ul>
+  </div></nav>
+
+  <main class="container py-4">
+
+    <!-- REQUIRED DEMO: 3 columns in a 12-col grid -->
+    <h1 class="mb-3 text-center">Three Columns (12-col grid)</h1>
+    <p class="text-center mb-4">
+      Desktop (≥992px): <code>col-lg-4</code> + <code>col-lg-4</code> + <code>col-lg-4</code><br>
+      Tablet (≥768px &lt; 992px): <code>col-md-6</code> + <code>col-md-6</code> then next line <code>col-md-6</code><br>
+      Mobile (&lt;768px): all <code>col-12</code> stacked
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 text-center">Column 1</div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 text-center">Column 2</div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 text-center">Column 3</div>
+      </div>
+    </div>
+
+    <!-- EXTRA DEMO (as you requested): 4 columns in a 12-col grid -->
+    <h2 class="mt-5 mb-3 text-center">Four Columns (12-col grid)</h2>
+    <p class="text-center mb-4">
+      Desktop (≥992px): <code>col-lg-3</code> × 4 = 12<br>
+      Tablet (≥768px &lt; 992px): <code>col-md-6</code> (two per row)<br>
+      Mobile (&lt;768px): <code>col-12</code> stacked
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3"><div class="card p-4 text-center">Col A</div></div>
+      <div class="col-12 col-md-6 col-lg-3"><div class="card p-4 text-center">Col B</div></div>
+      <div class="col-12 col-md-6 col-lg-3"><div class="card p-4 text-center">Col C</div></div>
+      <div class="col-12 col-md-6 col-lg-3"><div class="card p-4 text-center">Col D</div></div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
