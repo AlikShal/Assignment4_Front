@@ -1,0 +1,83 @@
+/* ===== Base ===== */
+:root{--bg:#f7f7f7;--text:#222;--brand:#2e7d32;--muted:#e9ecef}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+main{max-width:1100px;margin:0 auto;padding:1.25rem}
+
+/* ===== Navbar (site navigation across tasks) ===== */
+.navbar{background:#111;color:#fff}
+.navbar .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:1100px;margin:0 auto;padding:.75rem 1rem}
+.brand{font-weight:700;color:#fff;text-decoration:none}
+.navlinks{display:flex;gap:.5rem;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.navlinks a{display:inline-block;color:#fff;text-decoration:none;padding:.5rem .75rem;border-radius:.5rem}
+.navlinks a.active,.navlinks a:hover{background:#1f1f1f}
+
+/* ===== Task 0: Responsive Typography ===== */
+.typo h1{font-size:2rem;margin:.5rem 0}
+.typo h2{font-size:1.25rem;margin:.5rem 0}
+.typo p{margin:.5rem 0 1rem}
+@media (min-width:600px){.typo h1{font-size:2.4rem}.typo h2{font-size:1.4rem}}
+@media (min-width:900px){.typo h1{font-size:2.8rem}.typo h2{font-size:1.6rem}}
+
+/* ===== Task 1: Responsive Layout with Media Queries (3 boxes) ===== */
+.boxgrid{display:grid;gap:1rem}
+.box{border-radius:10px;color:#fff;padding:2rem 1rem;text-align:center}
+.box.a{background:#4caf50}.box.b{background:#ff9800}.box.c{background:#2196f3}
+@media (min-width:600px){.boxgrid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.boxgrid{grid-template-columns:repeat(3,1fr)}}
+
+/* ===== Task 2: “Bootstrap-like” 12-col grid (no CDN) ===== */
+.container{max-width:1100px;margin:0 auto;padding:1.25rem}
+.row{display:flex;flex-wrap:wrap;margin-left:-.75rem;margin-right:-.75rem}
+[class^=col-]{padding-left:.75rem;padding-right:.75rem}
+.col-12{flex:0 0 100%}
+@media (min-width:600px){ /* tablet */
+  .col-md-6{flex:0 0 50%}
+}
+@media (min-width:1024px){ /* desktop */
+  .col-lg-4{flex:0 0 33.333%}
+}
+.demo-card{background:#fff;border:1px solid #ddd;border-radius:10px;padding:1rem;text-align:center}
+
+/* ===== Task 3: Responsive Navbar (demo of collapse) ===== */
+.demo-wrap{max-width:1100px;margin:0 auto;padding:1.25rem}
+.demo-note{background:var(--muted);border-radius:10px;padding:1rem}
+
+/* ===== Task 4: Portfolio (Grid + MQ) ===== */
+.portfolio{display:grid;gap:1rem}
+@media (min-width:900px){.portfolio{grid-template-columns:2fr 1fr}}
+.card{background:#fff;border:1px solid #ddd;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.5rem}
+.footer{margin-top:1rem;background:#111;color:#fff;text-align:center;padding:.75rem 1rem;border-top:1px solid #000}
+/* Base */
+:root{--bg:#f7f7f7;--text:#222}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+main{max-width:1120px;margin:0 auto;padding:1.25rem}
+
+/* Site navbar used for task switching (independent of Bootstrap) */
+.site-nav{background:#111;color:#fff}
+.site-nav .bar{max-width:1120px;margin:0 auto;display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+.site-nav a{color:#fff;text-decoration:none}
+.site-nav ul{display:flex;gap:.5rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.site-nav li a{padding:.5rem .75rem;border-radius:.5rem}
+.site-nav li a.active,.site-nav li a:hover{background:#1f1f1f}
+
+/* Task 0 – Responsive Typography */
+.typo h1{font-size:2rem;margin:.5rem 0}.typo h2{font-size:1.25rem;margin:.5rem 0}.typo p{margin:.5rem 0 1rem}
+@media (min-width:600px){.typo h1{font-size:2.4rem}.typo h2{font-size:1.4rem}}
+@media (min-width:900px){.typo h1{font-size:2.8rem}.typo h2{font-size:1.6rem}}
+
+/* Task 1 – Responsive boxes via MQ */
+.boxgrid{display:grid;gap:1rem}.box{border-radius:10px;color:#fff;padding:2rem 1rem;text-align:center}
+.box.a{background:#4caf50}.box.b{background:#ff9800}.box.c{background:#2196f3}
+@media (min-width:600px){.boxgrid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.boxgrid{grid-template-columns:repeat(3,1fr)}}
+
+/* Task 4 – extra tweaks via custom MQ on top of Bootstrap */
+@media (max-width:576px){
+  .portfolio h1{font-size:1.5rem}
+  .portfolio .card{padding:.75rem}
+  .portfolio .sidebar .hide-sm{display:none} /* example of visibility change */
+}
+@media (min-width:992px){
+  .portfolio .card-title{letter-spacing:.02em}
+}
+.footer{margin-top:1rem;background:#111;color:#fff;text-align:center;padding:.75rem 1rem}

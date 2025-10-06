@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Task 3 – Bootstrap Navbar</title>
+<link href="styles.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="site-nav"><div class="bar">
+  <a class="brand" href="task0-typography.html">Assignment 4</a>
+  <ul>
+        <li><a href="typography.html">Task 0</a></li>
+        <li><a href="responsive-boxes.html">Task 1</a></li>
+        <li><a href="bootstrap-grid.html">Task 2</a></li>
+        <li><a href="bootstrap-navbar.html">Task 3</a></li>
+        <li><a class="active" href="portfolio-responsive.html">Task 4</a></li>
+  </ul>
+</div></nav>
+
+<header class="container py-4">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNav" aria-controls="demoNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="demoNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Docs</a></li>
+              <li><a class="dropdown-item" href="#">About</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <p class="lead">This demonstrates a Bootstrap navbar: brand left, links right, and a hamburger collapse on small screens.</p>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>
